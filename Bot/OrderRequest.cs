@@ -49,6 +49,11 @@ namespace SysBot.ACNHOrders
             Trader.SendMessageAsync($"I'm waiting for you {Trader.Username}! {msg}. Your Dodo code is **{dodo}**");
         }
 
+        public void PaymentReady(CorssBot routine, string msg, string payamount)
+        {
+            Trader.SendMessageAsync($"Your payment is ready: {msg}. The total amount for your order is **{payamount}**");
+        }
+
         public void OrderFinished(CrossBot routine, string msg)
         {
             OnFinish?.Invoke(routine);
