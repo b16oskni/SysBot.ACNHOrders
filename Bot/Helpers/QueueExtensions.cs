@@ -81,6 +81,18 @@ namespace SysBot.ACNHOrders
                 msg = $"{traderMention} - Failed to queue your order as it is the current processing order. Please wait a few seconds for the queue to clear if you've already completed it.";
                 return false;
             }
+            //Add code for sending payment info here
+            /*
+            need timer to give user time to pay - 5min max 
+            need check for payment done - user input - go through bot commands
+
+            if(){
+                
+            }
+            */
+            const string helper = "Your payment is ready: (link to paypal). The total amount for your order is 1£";
+            await Trader.SendMessageAsync(paymsg).ConfigureAwait(false);
+            
 
             var position = orderArray.Length + 1;
             var idToken = Globals.Bot.Config.OrderConfig.ShowIDs ? $" (ID {itemReq.OrderID})" : string.Empty;

@@ -16,6 +16,7 @@ namespace SysBot.ACNHOrders
         void OrderCancelled(CrossBot routine, string msg, bool faulted);
         void OrderFinished(CrossBot routine, string msg);
         void SendNotification(CrossBot routine, string msg);
+        void PaymentReady(CrossBot routine, string msg, string payAmount);
         Action<CrossBot>? OnFinish {set;}
 
     }
