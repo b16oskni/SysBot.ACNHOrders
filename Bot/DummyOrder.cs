@@ -42,6 +42,8 @@ namespace SysBot.ACNHOrders
         public void SendNotification(CrossBot routine, string msg)
         {
         }
-        public void PaymentReady(CrossBot routine, string msg, string payAmount);
+        public void PaymentReady(CrossBot routine, string msg, string payAmount)
+        {
+        }
     }
 }

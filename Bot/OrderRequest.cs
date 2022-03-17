@@ -51,7 +51,7 @@ namespace SysBot.ACNHOrders
 
         public void PaymentReady(CrossBot routine, string msg, string payAmount)
         {
-            Trader.SendMessageAsync($"Your payment is ready: {msg}. The total amount for your order is **{payamount}**");
+            Trader.SendMessageAsync($"Your payment is ready: {msg}. The total amount for your order is **{payAmount}**");
         }
 
         public void OrderFinished(CrossBot routine, string msg)

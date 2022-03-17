@@ -86,5 +86,9 @@ namespace SysBot.ACNHOrders.Twitch
         {
             return msg.Replace("**", string.Empty);
         }
+        public void PaymentReady(CrossBot routine, string msg, string payAmount)
+        {
+
+        }
     }
 }

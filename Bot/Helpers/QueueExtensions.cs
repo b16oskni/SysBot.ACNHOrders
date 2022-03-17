@@ -17,6 +17,11 @@ namespace SysBot.ACNHOrders
 
         public static async Task AddToQueueAsync(this SocketCommandContext Context, OrderRequest<Item> itemReq, string player, SocketUser trader)
         {
+
+
+            const string paymsg = "Your payment is ready: (link to paypal). The total amount for your order is 1£";
+            await trader.SendMessageAsync(paymsg).ConfigureAwait(false);
+
             IUserMessage test;
             try
             {
@@ -90,9 +95,6 @@ namespace SysBot.ACNHOrders
                 
             }
             */
-            const string helper = "Your payment is ready: (link to paypal). The total amount for your order is 1£";
-            await Trader.SendMessageAsync(paymsg).ConfigureAwait(false);
-            
 
             var position = orderArray.Length + 1;
             var idToken = Globals.Bot.Config.OrderConfig.ShowIDs ? $" (ID {itemReq.OrderID})" : string.Empty;
